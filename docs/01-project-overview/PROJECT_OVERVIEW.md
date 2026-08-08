@@ -670,8 +670,11 @@ The backend provides APIs and handles the core business logic.
 
 Possible technologies include:
 
-* Python
-* Django / Django REST Framework
+* Java
+* Spring Boot
+* Spring Security
+* Spring Data JPA
+* REST APIs
 
 Backend responsibilities include:
 
