@@ -1,351 +1,354 @@
 # CivicSnap — Project Overview
 
-## 1. Introduction
+## 1. Project Information
 
-CivicSnap is a civic complaint registration and management system designed to make it easier for citizens to report problems in their local communities and for authorities to manage those complaints efficiently.
+| Item                     | Details                                                                                                |
+| ------------------------ | ------------------------------------------------------------------------------------------------------ |
+| Project Name             | CivicSnap                                                                                              |
+| Project Type             | Civic Complaint Registration and Management System                                                     |
+| Application Type         | Mobile Application and Web Application                                                                 |
+| Primary Users            | Citizens, Department Administrators, Field Workers, System Administrators                              |
+| Domain                   | E-Governance / Civic Issue Management                                                                  |
+| Core Purpose             | Reporting, processing, tracking, and resolving civic complaints                                        |
+| AI Usage                 | AI-assisted complaint description and intelligent complaint processing                                 |
+| Main Platform Components | Citizen Mobile App, Worker Mobile App, Department Web Dashboard, Admin Web Dashboard, Backend Services |
 
-The system allows a citizen to capture a photograph of a civic issue directly through the application, such as a damaged streetlight, road damage, overflowing waste, water leakage, drainage problems, or other public infrastructure issues. After the image is uploaded, the system uses AI to analyze the image and generate a suitable complaint description. The citizen can review and edit the generated description before submitting the complaint.
-
-The application also captures the location and time associated with the complaint. Based on the complaint information, the system routes it to the appropriate department for verification and processing.
-
-CivicSnap follows a role-based architecture with separate access for citizens, department administrators, field workers, and system administrators. In addition to basic complaint management, the system includes intelligent worker assignment, SLA monitoring and escalation, complaint priority prediction, duplicate complaint detection, citizen feedback and rating, department performance analytics, mobile push notifications, and detailed complaint status tracking.
-
-The objective is to provide a complete digital workflow in which a complaint can be reported, verified, prioritized, assigned, resolved, reviewed, tracked, and analyzed through a single platform.
+CivicSnap is designed to provide a centralized platform for reporting and managing civic issues. The system connects citizens with the appropriate government department and supports the complete complaint lifecycle from registration to resolution.
 
 ---
 
-# 2. Problem Statement
+## 2. Problem Statement
 
-Citizens often face difficulties when reporting local civic problems. Traditional complaint systems may require users to manually describe the problem, identify the responsible department, provide location details, and repeatedly follow up to know the current status.
+Citizens frequently encounter civic problems such as damaged roads, broken streetlights, overflowing waste, water leakage, drainage issues, and other public infrastructure problems.
 
-At the administrative level, departments may also face difficulties in managing large numbers of complaints, assigning work efficiently, identifying urgent issues, detecting repeated complaints, and monitoring whether complaints are resolved within the expected time.
+Existing complaint processes can require citizens to manually describe the problem, identify the responsible department, provide accurate location information, and repeatedly contact authorities to determine the progress of their complaint.
 
-This can result in:
+Departments also face challenges when handling a large number of complaints. These include inefficient worker assignment, difficulty identifying high-priority issues, duplicate complaints, missed resolution deadlines, and limited performance visibility.
 
-* Incorrect or incomplete complaint descriptions
-* Complaints being sent to the wrong department
-* Lack of accurate location information
-* Delays in assigning complaints to workers
-* Uneven distribution of work among workers
-* Important complaints not receiving sufficient priority
-* Duplicate complaints for the same civic issue
-* Complaints remaining unresolved beyond their expected resolution time
-* Citizens not receiving timely updates
-* Difficulty tracking the current status of a complaint
-* Limited visibility into complaint progress
-* Difficulty verifying whether a reported issue has actually been resolved
+The major problems include:
+
+* Manual and incomplete complaint descriptions
+* Incorrect department routing
+* Difficulty providing accurate location information
+* Inefficient worker assignment
+* Uneven worker workload
+* Difficulty identifying high-priority complaints
+* Duplicate complaints for the same issue
+* Complaints exceeding expected resolution times
+* Lack of timely status updates for citizens
+* Limited transparency in complaint processing
+* Difficulty verifying completed work
 * Lack of structured citizen feedback
-* Difficulty measuring department performance
-* Poor communication between citizens, departments, and field workers
+* Limited department performance analysis
 
-CivicSnap aims to address these problems by providing an integrated complaint management system with AI assistance, intelligent processing, role-based access, automated notifications, complaint tracking, workflow management, and analytical capabilities.
-
----
-
-# 3. Proposed Solution
-
-CivicSnap provides a centralized platform for registering, processing, assigning, tracking, resolving, and analyzing civic complaints.
-
-The basic workflow is:
-
-1. A citizen captures a photograph of a civic issue using the application's camera.
-2. The photograph is uploaded to the system.
-3. The AI analyzes the image and generates a description of the detected issue.
-4. The citizen reviews the generated description and can modify it if necessary.
-5. The application records the complaint location and submission time.
-6. The system determines the relevant department for the complaint.
-7. The system checks for potentially duplicate complaints in the same or nearby area.
-8. The system evaluates the complaint and recommends an appropriate priority.
-9. The complaint is sent to the corresponding department dashboard.
-10. A department administrator verifies the complaint.
-11. The complaint receives an SLA based on its category and priority.
-12. The system recommends a suitable field worker based on availability, workload, location, and work requirements.
-13. The department administrator confirms the assignment.
-14. The assigned worker receives a notification about the new assignment.
-15. The worker receives the assigned complaint through the worker application.
-16. The worker visits the reported location and works on resolving the issue.
-17. The worker updates the complaint with resolution details and supporting evidence.
-18. The department administrator receives a notification about the submitted resolution.
-19. The department verifies the submitted resolution.
-20. The complaint is marked as resolved if the submitted evidence is accepted.
-21. The citizen receives a notification about important complaint status changes.
-22. The citizen can track the complaint throughout its lifecycle.
-23. The citizen can view the final resolution and provide feedback or a rating.
-24. The system uses complaint and resolution data to generate department performance analytics.
-
-This workflow connects citizens, departments, and field workers while providing automated assistance, status tracking, and notifications at different stages of the complaint lifecycle.
+CivicSnap aims to address these issues through a centralized, role-based complaint management platform.
 
 ---
 
-# 4. Main Objectives
+## 3. Proposed Solution
 
-The main objectives of CivicSnap are:
+CivicSnap provides a digital platform through which citizens can report civic problems using photographs and location information.
 
-* Provide a simple method for citizens to report civic problems.
-* Allow citizens to capture and upload issue photographs directly from the application.
-* Use AI to assist in generating complaint descriptions from uploaded images.
-* Allow citizens to verify and edit AI-generated descriptions before submission.
-* Automatically associate complaints with their location and submission time.
-* Route complaints to the appropriate department.
-* Detect potentially duplicate complaints.
-* Recommend suitable complaint priority levels.
-* Monitor complaint resolution deadlines through SLA tracking.
-* Recommend suitable workers based on availability, workload, location, and required work type.
-* Provide role-based dashboards for citizens, departments, workers, and administrators.
-* Allow citizens to track the status and progress of their complaints.
-* Provide a complete complaint history with important status changes and timestamps.
-* Send mobile push notifications for important complaint and work updates.
-* Allow department administrators to verify complaints and manage assignments.
-* Maintain a complete history of complaint progress.
-* Provide evidence-based resolution updates from field workers.
-* Allow citizens to provide feedback and ratings after resolution.
-* Provide department-level performance analytics.
-* Identify overdue complaints and support escalation.
-* Improve transparency and accountability throughout the complaint lifecycle.
+A citizen can capture an image of an issue using the mobile application. The system uses AI to generate an initial description of the issue from the image. The citizen can review and edit this description before submitting the complaint.
 
----
+After submission, the system records the complaint location and routes the complaint to the appropriate department.
 
-# 5. Target Users
-
-CivicSnap is designed around four primary roles.
-
-## 5.1 Citizen
-
-The citizen is responsible for reporting civic problems and tracking their complaints.
-
-Main responsibilities include:
-
-* Registering and managing an account
-* Capturing an issue using the application camera
-* Uploading the captured image
-* Reviewing the AI-generated complaint description
-* Editing the description when required
-* Submitting complaints
-* Viewing complaint details
-* Tracking complaint status
-* Viewing complaint history
-* Receiving mobile push notifications
-* Viewing department processing updates
-* Viewing resolution details
-* Providing feedback after resolution
-* Rating the handling of a complaint
-
-## 5.2 Department Administrator
-
-The department administrator manages complaints assigned to a particular department.
-
-Main responsibilities include:
-
-* Viewing incoming complaints
-* Receiving notifications for important complaint events
-* Verifying reported complaints
-* Reviewing complaint details and location
-* Reviewing duplicate complaint suggestions
-* Reviewing recommended complaint priority
-* Assigning complaints to workers
-* Reviewing intelligent worker assignment recommendations
-* Monitoring worker progress
-* Monitoring SLA status
-* Handling overdue complaints
-* Reviewing submitted resolution evidence
-* Approving or rejecting resolution updates
-* Monitoring department performance
-* Reviewing citizen feedback
-
-## 5.3 Field Worker
-
-The field worker handles the physical resolution of assigned complaints.
-
-Main responsibilities include:
-
-* Receiving notifications for new assignments
-* Viewing assigned complaints
-* Viewing complaint location and details
-* Viewing priority and deadline information
-* Updating work status
-* Visiting the reported location
-* Resolving the reported issue
-* Uploading resolution evidence
-* Adding completion notes
-* Marking assigned work as completed
-* Receiving updates related to assigned complaints
-
-## 5.4 System Administrator
-
-The system administrator manages the overall CivicSnap platform.
-
-Main responsibilities include:
-
-* Managing users and roles
-* Managing departments
-* Managing worker and department accounts
-* Managing complaint categories
-* Configuring SLA rules
-* Monitoring the overall complaint system
-* Managing system-level settings
-* Reviewing system activity
-* Viewing system-wide analytics
-* Handling administrative operations
-
----
-
-# 6. Core Features
-
-## 6.1 Complaint Registration
-
-Citizens can report a civic problem by capturing an image through the application.
-
-The image acts as the primary input for creating the complaint. The citizen does not need to manually write a complete description from the beginning because the system assists by generating a description from the uploaded image.
-
-The complaint can contain information such as:
-
-* Issue image
-* AI-generated description
-* Citizen-edited description
-* Location
-* Submission time
-* Complaint category
-* Complaint status
-* Priority
-* Assigned department
-* Assigned worker where applicable
-
----
-
-## 6.2 AI-Assisted Description Generation
-
-AI is an important component of CivicSnap.
-
-After an image is uploaded, the AI analyzes its contents and generates a description that can be used as the initial complaint description.
-
-For example, an image showing a damaged streetlight may result in a description describing a damaged or non-functional streetlight requiring maintenance.
-
-The generated description is not submitted automatically.
-
-The citizen is given an opportunity to:
-
-1. Review the generated description.
-2. Correct inaccurate information.
-3. Add missing information.
-4. Approve the final description.
-5. Submit the complaint.
-
-This keeps the citizen in control while reducing the effort required to manually describe the problem.
-
----
-
-## 6.3 Location and Time Capture
-
-The application records the geographical location associated with the complaint along with the submission time.
-
-Location information helps the responsible department identify where the problem has been reported and allows workers to navigate to the issue location.
-
-Location information can also be used by other system components such as:
+The system also provides intelligent features for managing complaints, including:
 
 * Duplicate complaint detection
-* Worker assignment
-* Complaint priority analysis
-* Department analytics
-* Geographic complaint analysis
+* Complaint priority prediction
+* Intelligent worker assignment
+* SLA monitoring and escalation
+* Mobile push notifications
+* Complaint status tracking
+* Citizen feedback and rating
+* Department performance analytics
+
+Department administrators can verify complaints, manage assignments, monitor SLAs, and review resolution evidence submitted by workers.
+
+Workers receive assigned complaints through their application, visit the reported location, resolve the issue, and submit completion information and supporting evidence.
+
+Citizens can track the status of their complaints throughout the complete lifecycle and receive notifications when important changes occur.
 
 ---
 
-## 6.4 Department Routing
+## 4. Objectives
 
-CivicSnap associates a complaint with the department responsible for handling that type of issue.
+The primary objectives of CivicSnap are:
+
+1. Provide citizens with a simple method to report civic problems.
+2. Allow citizens to report issues using photographs and location information.
+3. Reduce the effort required to manually describe reported problems using AI assistance.
+4. Allow citizens to verify and edit AI-generated descriptions.
+5. Route complaints to the appropriate department.
+6. Detect potentially duplicate complaints.
+7. Predict or recommend suitable complaint priority levels.
+8. Improve worker assignment based on availability, workload, location, and work requirements.
+9. Monitor complaint resolution deadlines using SLA tracking.
+10. Escalate complaints that exceed defined SLA limits.
+11. Allow citizens to track complaint status and history.
+12. Provide timely mobile push notifications for important complaint events.
+13. Provide departments with tools to verify complaints and completed work.
+14. Allow citizens to provide feedback and ratings after resolution.
+15. Provide department performance analytics.
+16. Maintain a transparent and traceable complaint lifecycle.
+17. Improve coordination between citizens, departments, and field workers.
+
+---
+
+## 5. Scope
+
+The scope of CivicSnap covers the complete lifecycle of a civic complaint.
+
+### 5.1 Citizen Services
+
+* User registration and authentication
+* Citizen profile management
+* Image-based complaint registration
+* AI-assisted description generation
+* Description editing and verification
+* Location capture
+* Complaint submission
+* Complaint status tracking
+* Complaint history
+* Resolution viewing
+* Mobile push notifications
+* Citizen feedback
+* Complaint rating
+
+### 5.2 Complaint Management
+
+* Complaint categorization
+* Department routing
+* Complaint verification
+* Duplicate complaint detection
+* Complaint priority prediction
+* Complaint status management
+* SLA assignment
+* SLA monitoring
+* Complaint escalation
+* Resolution verification
+
+### 5.3 Worker Management
+
+* Worker authentication
+* Worker availability
+* Worker assignment
+* Intelligent worker assignment recommendations
+* Assigned complaint management
+* Work status updates
+* Location-based complaint information
+* Resolution evidence submission
+* Completion notes
+* Worker notifications
+
+### 5.4 Department Management
+
+* Department dashboard
+* Complaint verification
+* Worker management
+* Intelligent worker assignment
+* SLA monitoring
+* Escalation management
+* Resolution verification
+* Citizen feedback analysis
+* Department performance analytics
+
+### 5.5 System Administration
+
+* User management
+* Role management
+* Department management
+* Worker management
+* Complaint category management
+* SLA configuration
+* Notification management
+* System monitoring
+* System-wide analytics
+* Audit information
+
+---
+
+## 6. Stakeholders
+
+The main stakeholders of CivicSnap include:
+
+### Citizens
+
+Citizens are the primary users who report civic issues and track their complaints.
+
+### Government Departments
+
+Departments are responsible for verifying complaints, assigning workers, monitoring progress, and confirming resolutions.
+
+### Department Administrators
+
+Department administrators manage complaints and workers within their respective departments.
+
+### Field Workers
+
+Field workers are responsible for physically addressing and resolving civic issues.
+
+### System Administrators
+
+System administrators manage the overall platform, users, departments, configurations, and system-level operations.
+
+### Civic Authorities
+
+Civic authorities can use the system's analytics and reports to understand complaint trends, department performance, workload, and service efficiency.
+
+---
+
+## 7. User Roles
+
+CivicSnap uses role-based access control.
+
+### 7.1 Citizen
+
+The citizen can:
+
+* Register and log in
+* Submit complaints
+* Capture and upload images
+* Review AI-generated descriptions
+* Edit complaint descriptions
+* Provide location information
+* View submitted complaints
+* Track complaint status
+* View complaint history
+* Receive push notifications
+* View resolution information
+* Submit feedback
+* Rate resolved complaints
+
+### 7.2 Department Administrator
+
+The department administrator can:
+
+* View department complaints
+* Verify complaints
+* Review complaint images and locations
+* Review duplicate suggestions
+* Review priority recommendations
+* Assign workers
+* Review intelligent worker recommendations
+* Monitor worker workload
+* Monitor SLA status
+* Handle escalated complaints
+* Review resolution evidence
+* Approve or reject resolutions
+* View department analytics
+* Review citizen feedback
+
+### 7.3 Field Worker
+
+The field worker can:
+
+* Log in to the worker application
+* View assigned complaints
+* View complaint details
+* View complaint location
+* View priority and deadline information
+* Update work status
+* Submit progress updates
+* Upload resolution evidence
+* Add completion notes
+* Mark assigned work as completed
+* Receive push notifications
+
+### 7.4 System Administrator
+
+The system administrator can:
+
+* Manage users
+* Manage roles
+* Manage departments
+* Manage workers
+* Manage complaint categories
+* Configure SLA rules
+* Manage system settings
+* Monitor system activity
+* View system-wide analytics
+* Manage notification configuration
+
+---
+
+## 8. Major Features
+
+### 8.1 Image-Based Complaint Registration
+
+Citizens can capture photographs of civic issues and submit them as part of a complaint.
 
 Examples include:
 
-| Complaint Type      | Possible Department           |
-| ------------------- | ----------------------------- |
-| Damaged streetlight | Electrical / Street Lighting  |
-| Waste accumulation  | Sanitation / Waste Management |
-| Water leakage       | Water Supply                  |
-| Damaged road        | Public Works                  |
-| Drainage problem    | Drainage / Public Works       |
+* Broken streetlights
+* Damaged roads
+* Waste accumulation
+* Water leakage
+* Drainage problems
+* Damaged public infrastructure
 
-The actual departments and routing rules can be configured according to the requirements of the deployment area.
+### 8.2 AI-Assisted Complaint Description
 
----
+The uploaded image is analyzed by an AI service to generate an initial complaint description.
 
-## 6.5 Duplicate Complaint Detection
+The citizen can review, correct, and modify the generated description before submitting the complaint.
 
-CivicSnap attempts to identify complaints that may refer to the same civic issue.
+AI assistance reduces manual effort while keeping the citizen responsible for confirming the final information.
 
-Duplicate detection can consider multiple factors, including:
+### 8.3 Location and Time Capture
 
-* Geographic proximity
-* Complaint submission time
+The system records the location and submission time associated with a complaint.
+
+This information helps with:
+
+* Department routing
+* Worker assignment
+* Duplicate detection
+* Complaint verification
+* Geographic analysis
+
+### 8.4 Department Routing
+
+Complaints are associated with the department responsible for handling the reported issue.
+
+The routing can be based on complaint category and configured department rules.
+
+### 8.5 Duplicate Complaint Detection
+
+The system identifies potentially duplicate complaints by comparing information such as:
+
+* Location
+* Time
 * Complaint category
-* Complaint description
-* Uploaded images
-* Similarity between reported issues
+* Description
+* Images
 
-For example, if several citizens report a damaged streetlight from the same location within a short period, the system can identify the complaints as potentially related.
+Potential duplicates can be flagged for department review rather than automatically being deleted.
 
-The system should not automatically delete or reject a complaint solely because it appears to be a duplicate. Instead, it can flag the complaint for review or associate it with an existing complaint.
+### 8.6 Complaint Priority Prediction
 
-This prevents multiple reports of the same issue from unnecessarily creating separate workloads while still preserving citizen reports.
+The system recommends a priority level based on complaint information such as:
 
----
-
-## 6.6 Complaint Priority Prediction
-
-CivicSnap includes a priority recommendation mechanism to help departments identify complaints that may require faster attention.
-
-The recommended priority can consider factors such as:
-
-* Type of civic issue
-* Estimated severity
+* Issue type
+* Severity
 * Location
 * Potential public impact
-* Number of affected people where available
 * Complaint history
-* Existing department rules
-* Other relevant complaint information
+* Department rules
 
-The system can classify complaints into levels such as:
+Possible priority levels include:
 
 * Critical
 * High
 * Medium
 * Low
 
-The priority recommendation is intended to assist department administrators. Administrators can review and modify the recommended priority when necessary.
+The department administrator can review and modify the recommended priority.
 
----
+### 8.7 Intelligent Worker Assignment
 
-## 6.7 Complaint Verification
-
-A complaint received by a department is not immediately treated as completed work.
-
-The department administrator can review the submitted information, including:
-
-* Complaint image
-* Generated or edited description
-* Location
-* Time of submission
-* Complaint category
-* Recommended priority
-* Duplicate complaint information
-* Citizen information where appropriate
-
-The administrator can then verify the complaint before assigning it for field work.
-
-Possible verification outcomes include:
-
-* Verified
-* Rejected
-* Requires additional information
-* Marked as potential duplicate
-
----
-
-## 6.8 Intelligent Worker Assignment
-
-Verified complaints can be assigned to field workers using an intelligent assignment mechanism.
-
-Instead of considering only whether a worker belongs to the department, the system can evaluate multiple factors such as:
+The system recommends suitable workers for verified complaints based on factors such as:
 
 * Worker availability
 * Current workload
@@ -356,626 +359,441 @@ Instead of considering only whether a worker belongs to the department, the syst
 * Existing assignments
 * Estimated travel distance
 
-The system can generate a recommended worker for a complaint.
+The department administrator retains control over the final assignment.
 
-The department administrator can review the recommendation and confirm or change the assignment.
+### 8.8 SLA Monitoring and Escalation
 
-This approach aims to distribute work more efficiently and reduce unnecessary travel or workload imbalance.
+CivicSnap tracks expected processing and resolution times using Service Level Agreements.
 
----
-
-## 6.9 SLA Monitoring and Escalation
-
-CivicSnap includes Service Level Agreement (SLA) monitoring to track whether complaints are being handled within their expected time limits.
-
-An SLA can define expected time periods for different stages of a complaint.
-
-For example:
-
-```text
-Complaint Submitted
-        |
-        v
-Verification Deadline
-        |
-        v
-Assignment Deadline
-        |
-        v
-Resolution Deadline
-```
-
-The system can monitor these deadlines and classify complaints according to their SLA status.
-
-Possible states include:
+The system can identify complaints that are:
 
 * On Track
 * Approaching Deadline
 * SLA Breached
 * Escalated
 
-When a complaint exceeds its defined SLA, the system can flag the complaint and trigger an escalation process.
+When an SLA is breached, the complaint can be highlighted and escalated to the appropriate administrative level.
 
-Escalation may involve:
+### 8.9 Complaint Status Tracking
 
-* Notifications to the department administrator
-* Increased visibility on the dashboard
-* Escalation to a higher administrative role
-* Recording the SLA violation for analytics
+Citizens can track their complaints throughout the complete processing lifecycle.
 
----
-
-## 6.10 Mobile Push Notifications
-
-CivicSnap includes mobile push notifications to keep users informed about important events without requiring them to continuously open the application.
-
-Notifications can be sent for events such as:
-
-### Citizen Notifications
-
-* Complaint successfully submitted
-* Complaint verified
-* Complaint rejected
-* Complaint assigned
-* Complaint status changed
-* Complaint marked as resolved
-* Resolution submitted
-* Request for additional information
-* Feedback or rating reminder
-* SLA-related updates where applicable
-
-### Department Administrator Notifications
-
-* New complaint received
-* Complaint requiring verification
-* SLA approaching
-* SLA breached
-* Worker status update
-* Resolution submitted by worker
-* Complaint requiring review
-
-### Worker Notifications
-
-* New complaint assigned
-* Assignment changed
-* High-priority complaint assigned
-* Upcoming or approaching deadline
-* Assignment update
-* Resolution review result
-
-Push notifications provide timely information and reduce the need for users to repeatedly check the application for updates.
-
----
-
-## 6.11 Complaint Status Tracking
-
-Complaint status tracking is a major feature of CivicSnap.
-
-Citizens can view the current status and progress of each complaint from their application.
-
-A typical complaint lifecycle is:
+A typical status flow is:
 
 ```text
 Submitted
-    |
-    v
+    ↓
 Under Review
-    |
-    v
+    ↓
 Verified
-    |
-    v
+    ↓
 Assigned
-    |
-    v
+    ↓
 In Progress
-    |
-    v
+    ↓
 Resolution Submitted
-    |
-    v
+    ↓
 Department Verification
-    |
-    v
+    ↓
 Resolved
 ```
 
-The citizen can view information such as:
+The citizen can view:
 
-* Current complaint status
-* Complaint submission date and time
-* Reported location
-* Assigned department
-* Assigned worker status where appropriate
-* Current processing stage
+* Current status
+* Complaint details
+* Submission time
+* Location
+* Department
+* Processing stage
 * Important status changes
 * Resolution information
-* Resolution evidence where appropriate
 * Complaint history
-* Relevant notifications
 
-Each important status change can be recorded with a timestamp so that the complaint maintains a complete history.
+Every important status change can be stored with a timestamp.
 
-Citizens do not need to repeatedly contact the department to determine whether their complaint has been processed. They can use the application to check its current status and receive push notifications when important changes occur.
+Citizens do not need to repeatedly contact the department to ask about the progress of a complaint. They can check the current status directly through the application.
 
-Additional statuses may include:
+### 8.10 Mobile Push Notifications
 
-* Rejected
-* On Hold
-* Potential Duplicate
-* SLA Breached
-* Reopened
+The system sends mobile push notifications for important events.
 
----
+Citizen notifications may include:
 
-## 6.12 Resolution Updates
+* Complaint submitted
+* Complaint verified
+* Complaint rejected
+* Complaint assigned
+* Status changed
+* Resolution submitted
+* Complaint resolved
+* Request for additional information
+* Feedback reminder
 
-After completing the assigned work, the worker can update the complaint with:
+Worker notifications may include:
 
-* Work completion status
-* Completion notes
-* Resolution photograph
-* Completion time
-* Additional information where required
+* New assignment
+* Assignment changes
+* High-priority complaint
+* Approaching deadline
+* Resolution review result
 
-The department administrator can review the submitted resolution before the complaint is finally marked as resolved.
+Department administrator notifications may include:
 
-If the evidence is insufficient, the administrator can reject the resolution update and return the complaint for further action.
+* New complaint
+* Complaint requiring verification
+* SLA approaching
+* SLA breach
+* Worker updates
+* Resolution submitted
 
----
+### 8.11 Resolution Verification
 
-## 6.13 Citizen Feedback and Rating
+Workers submit completion information and supporting evidence after resolving a complaint.
 
-After a complaint has been resolved and verified, the citizen can provide feedback about the complaint handling process.
+The department administrator reviews the evidence before the complaint is marked as finally resolved.
 
-The feedback system can include:
+If the submitted evidence is insufficient, the resolution can be rejected and the complaint can be reopened.
+
+### 8.12 Citizen Feedback and Rating
+
+After resolution, citizens can provide feedback and rate the complaint handling process.
+
+Feedback can include:
 
 * Rating
-* Optional written feedback
-* Resolution satisfaction
-* Comments about the service
+* Written comments
+* Satisfaction information
+* Resolution feedback
 
-This information can be used to understand citizen satisfaction and identify areas where departments may need improvement.
+This information contributes to department performance analysis.
 
-Feedback should be associated with the relevant complaint so that it can be analyzed together with processing and resolution information.
+### 8.13 Department Performance Analytics
 
----
+Departments can view analytics such as:
 
-## 6.14 Department Performance Analytics
-
-CivicSnap provides analytical information to help departments understand their performance.
-
-The department dashboard can include metrics such as:
-
-* Total complaints received
+* Total complaints
 * Pending complaints
 * Resolved complaints
-* Rejected complaints
 * Average resolution time
-* SLA compliance rate
+* SLA compliance
 * SLA breaches
 * Worker workload
 * Complaint priority distribution
 * Duplicate complaints
 * Citizen ratings
 * Citizen satisfaction
-* Complaint trends over time
-* Average time spent in different complaint stages
+* Complaint trends
 
-These analytics can help department administrators identify delays, workload problems, frequently reported issues, SLA problems, and areas requiring improvement.
+These analytics help departments identify operational problems and improve service delivery.
+
+### 8.14 Role-Based Access Control
+
+Each user receives permissions based on their role.
+
+Citizens, department administrators, field workers, and system administrators have separate access and responsibilities.
 
 ---
 
-## 6.15 Role-Based Access
+## 9. System Workflow
 
-CivicSnap uses role-based access control so that different users receive different permissions.
+The overall CivicSnap workflow is:
+
+```text
+                    CITIZEN
+                       |
+                       v
+               Capture Civic Issue
+                       |
+                       v
+                  Upload Image
+                       |
+                       v
+             AI Description Generation
+                       |
+                       v
+              Citizen Verification
+                       |
+                       v
+               Submit Complaint
+                       |
+                       v
+              Location + Timestamp
+                       |
+                       v
+             Duplicate Detection
+                       |
+                       v
+             Priority Recommendation
+                       |
+                       v
+               Department Routing
+                       |
+                       v
+            Department Verification
+                       |
+                       v
+                 SLA Assignment
+                       |
+                       v
+          Intelligent Worker Assignment
+                       |
+                       v
+                Worker Notification
+                       |
+                       v
+                 Work In Progress
+                       |
+                       v
+            Resolution Evidence Upload
+                       |
+                       v
+             Department Verification
+                       |
+                 +-----+-----+
+                 |           |
+              Rejected     Approved
+                 |           |
+                 v           v
+              Rework      Resolved
+                             |
+                             v
+                    Citizen Notification
+                             |
+                             v
+                    Citizen Feedback
+                             |
+                             v
+                 Department Analytics
+```
+
+At any point during the complaint lifecycle, the citizen can view the current status and relevant complaint history.
+
+---
+
+## 10. AI Workflow
+
+AI is used as an assisting component within CivicSnap rather than as a replacement for human decision-making.
+
+### Step 1 — Image Capture
+
+The citizen captures an image of the civic issue.
+
+### Step 2 — Image Upload
+
+The application sends the image to the backend.
+
+### Step 3 — AI Processing
+
+The backend sends the image to the AI service for analysis.
+
+### Step 4 — Description Generation
+
+The AI generates an initial description of the visible issue.
 
 For example:
 
-* Citizens can create and track their own complaints.
-* Department administrators can manage complaints belonging to their department.
-* Workers can access complaints assigned to them.
-* System administrators can manage the overall platform.
-
-This prevents unauthorized users from accessing or modifying information outside their responsibilities.
-
----
-
-# 7. High-Level System Architecture
-
-CivicSnap consists of multiple application and service layers.
-
-## Citizen Application
-
-Used by citizens to:
-
-* Capture issue photographs
-* Submit complaints
-* Review AI-generated descriptions
-* Track complaints
-* View complaint history
-* View complaint updates
-* Receive mobile push notifications
-* Submit feedback and ratings
-
-## Backend Server
-
-The backend handles the main business logic of the system, including:
-
-* Authentication and authorization
-* Complaint management
-* User and role management
-* Department routing
-* Duplicate detection
-* Priority recommendation
-* Worker assignment
-* SLA management
-* Complaint status management
-* Complaint history
-* Location information
-* AI service integration
-* Push notification management
-* Feedback management
-* Analytics data processing
-* Data validation
-
-## AI Service
-
-The AI component receives the uploaded complaint image and generates a useful description of the visible civic issue.
-
-AI-assisted functionality can also support other components such as complaint classification, priority recommendation, and duplicate detection depending on the final implementation.
-
-The AI service is treated as an assisting component rather than the final authority. Human verification remains part of important decision-making processes.
-
-## Notification Service
-
-The notification service manages mobile push notifications generated by important system events.
-
-It is responsible for:
-
-* Registering user devices
-* Managing notification tokens
-* Sending push notifications
-* Associating notifications with users and roles
-* Triggering notifications based on complaint events
-* Handling notification delivery status where supported
-
-## Department Dashboard
-
-Department administrators use the dashboard to:
-
-* Review complaints
-* Verify complaints
-* Review duplicate suggestions
-* Review priority recommendations
-* Assign workers
-* Monitor SLA status
-* Monitor complaint progress
-* Review resolution evidence
-* Manage department workload
-* View performance analytics
-* Receive important system notifications
-
-## Worker Application
-
-Field workers use the application to:
-
-* View assigned complaints
-* Access complaint information
-* View complaint location
-* View priority and deadline information
-* Navigate to the reported location
-* Update work progress
-* Submit resolution evidence
-* Receive assignment notifications
-
-## Database
-
-The database stores application information such as:
-
-* User accounts
-* Roles
-* Departments
-* Complaint records
-* Complaint images
-* Locations
-* Complaint categories
-* Complaint priorities
-* Complaint status history
-* Worker assignments
-* SLA information
-* Resolution information
-* Citizen feedback
-* Ratings
-* Notifications
-* Device notification tokens
-* Analytics-related data
-* Audit information
-
----
-
-# 8. Complaint Lifecycle
-
-A complaint follows a structured lifecycle within the system.
-
 ```text
-Citizen
-   |
-   v
-Capture Issue
-   |
-   v
-Upload Image
-   |
-   v
-AI Description Generation
-   |
-   v
-Citizen Verification
-   |
-   v
-Complaint Submission
-   |
-   v
-Citizen Notification
-   |
-   v
-Duplicate Detection
-   |
-   v
-Priority Recommendation
-   |
-   v
-Department Routing
-   |
-   v
-Department Verification
-   |
-   v
-SLA Assignment
-   |
-   v
-Intelligent Worker Recommendation
-   |
-   v
-Worker Assignment
-   |
-   v
-Worker Notification
-   |
-   v
-Work In Progress
-   |
-   v
-Resolution Evidence Submitted
-   |
-   v
-Department Notification
-   |
-   v
-Department Review
-   |
-   v
-Complaint Resolved
-   |
-   v
-Citizen Notification
-   |
-   v
-Citizen Feedback
-   |
-   v
-Performance Analytics
+Input:
+Photograph of a damaged streetlight.
+
+AI Output:
+"Streetlight appears to be damaged and may require electrical maintenance."
 ```
 
-At any point, the citizen can use the application to view the current complaint status and relevant history.
+### Step 5 — Citizen Verification
 
-The lifecycle provides a traceable record of what happened to a complaint from the time it was created until it was resolved and evaluated.
+The generated description is shown to the citizen.
 
----
+The citizen can:
 
-# 9. Intelligent Processing
+* Accept it
+* Edit it
+* Add additional information
+* Correct incorrect information
 
-One of the main objectives of CivicSnap is to reduce unnecessary manual work while keeping important decisions under human control.
+### Step 6 — Complaint Submission
 
-The system uses intelligent processing at multiple points in the complaint lifecycle.
+The citizen submits the final verified complaint.
 
-### AI-Assisted Description
+### Additional Intelligent Components
 
-The uploaded image is analyzed to generate an initial complaint description.
+Depending on the final implementation, intelligent techniques can also support:
 
-### Duplicate Detection
+* Complaint priority prediction
+* Duplicate complaint detection
+* Worker assignment recommendations
 
-The system identifies potentially related complaints using available complaint information.
-
-### Priority Recommendation
-
-The system evaluates complaint information and recommends a suitable priority level.
-
-### Worker Assignment
-
-The system evaluates worker availability, workload, location, and complaint requirements to recommend a suitable worker.
-
-### SLA Monitoring
-
-The system evaluates complaint deadlines and identifies complaints that are approaching or exceeding their expected resolution time.
-
-### Notification Automation
-
-The system automatically generates notifications when important complaint or workflow events occur.
-
-These components work together to make complaint processing more organized and efficient while allowing administrators to review and control important decisions.
+Human users retain control over important decisions such as complaint verification, final priority, worker assignment, and resolution approval.
 
 ---
 
-# 10. Transparency and Verification
+## 11. Technology Stack
 
-A major goal of CivicSnap is to avoid treating a complaint as resolved simply because a worker marks it as completed.
+The technology stack may be organized into the following components.
 
-When a worker completes a task, the worker can submit supporting evidence such as a photograph and completion information.
+### Mobile Applications
 
-The department administrator can review this information before confirming the final resolution.
+Used for citizen and field-worker functionality.
 
-This provides an additional verification layer between field work and final complaint closure.
+Possible technologies include:
 
-If the submitted evidence does not adequately demonstrate that the issue has been resolved, the department can reject the resolution update or reopen the complaint for further action.
+* Flutter
+* Dart
 
-Similarly, AI-generated descriptions, priority recommendations, duplicate suggestions, and worker recommendations are intended to assist users rather than completely replace human decision-making.
+The mobile applications provide:
 
-The complaint history also provides a record of important actions and status changes, improving accountability throughout the process.
+* Complaint registration
+* Camera and image upload
+* Location access
+* Complaint tracking
+* Worker task management
+* Push notifications
+* Feedback and rating
+
+### Web Applications
+
+Used for department and administrative dashboards.
+
+Possible technologies include:
+
+* React.js
+* HTML
+* CSS
+* JavaScript
+
+The dashboards provide complaint management, worker management, SLA monitoring, analytics, and administrative functionality.
+
+### Backend
+
+The backend provides APIs and handles the core business logic.
+
+Possible technologies include:
+
+* Python
+* Django / Django REST Framework
+
+Backend responsibilities include:
+
+* Authentication
+* Authorization
+* Complaint management
+* Department routing
+* Worker assignment
+* SLA management
+* Notification processing
+* AI integration
+* Analytics
+* API management
+
+### Database
+
+A relational database can be used to store structured application data.
+
+Possible technology:
+
+* PostgreSQL
+
+The database stores users, complaints, departments, workers, assignments, status history, SLA information, feedback, notifications, and other system data.
+
+### AI
+
+AI services can be integrated for:
+
+* Image-based complaint description
+* Complaint classification
+* Priority prediction
+* Duplicate detection
+* Intelligent worker recommendations
+
+The exact AI model and algorithm can be selected based on the final implementation and available training or evaluation data.
+
+### Push Notifications
+
+A push notification service can be integrated to deliver real-time mobile notifications to citizens and workers.
+
+### Development and Collaboration Tools
+
+The project can use:
+
+* Git
+* GitHub
+* Visual Studio Code
+* Postman
+* API documentation tools
+
+The final technology choices may be refined during implementation based on project requirements and testing.
 
 ---
 
-# 11. Expected Benefits
+## 12. Project Boundaries
 
-CivicSnap is expected to provide the following benefits:
+CivicSnap focuses specifically on the digital management of civic complaints.
 
-* Simplified civic complaint registration
-* Reduced effort for citizens when describing issues
-* Better use of photographs as complaint evidence
-* AI-assisted complaint descriptions
-* Improved department routing
+### Included Within the Project
+
+* Civic complaint registration
+* Image-based reporting
+* AI-assisted description generation
+* Location capture
+* Department routing
+* Complaint verification
+* Duplicate complaint detection
+* Complaint priority prediction
+* Intelligent worker assignment
+* SLA monitoring
+* Escalation
+* Worker task management
+* Complaint status tracking
+* Complaint history
+* Resolution evidence
+* Citizen feedback and rating
+* Department performance analytics
+* Mobile push notifications
+* Role-based access control
+
+### Outside the Initial Project Boundary
+
+The following are not part of the initial implementation:
+
+* Direct physical execution of civic repair work
+* Procurement of materials
+* Government financial management
+* Payroll management
+* Full government ERP functionality
+* Automatic approval of all complaints without human verification
+* Complete replacement of existing government systems
+* Predictive maintenance of infrastructure without sufficient historical data
+* Large-scale city infrastructure control
+
+CivicSnap is primarily a complaint management and coordination platform. Physical work remains the responsibility of the appropriate civic department and its field workers.
+
+---
+
+## 13. Expected Outcome
+
+The expected outcome of CivicSnap is a working civic complaint management platform that provides a complete and traceable workflow from complaint registration to resolution.
+
+The system is expected to provide:
+
+* Easier complaint registration for citizens
+* Reduced effort through AI-assisted descriptions
+* Accurate location information
+* Better department routing
 * Reduced duplicate complaint processing
-* Better identification of high-priority complaints
+* Improved complaint prioritization
 * More efficient worker assignment
 * Better workload distribution
-* Improved monitoring of complaint deadlines
-* Faster identification of SLA violations
-* Timely communication through mobile push notifications
+* Monitoring of complaint resolution deadlines
+* Escalation of delayed complaints
+* Real-time mobile push notifications
 * Transparent complaint status tracking
 * Complete complaint history
 * Evidence-based resolution verification
-* Improved citizen feedback collection
-* Better understanding of department performance
-* Greater accountability through status history and evidence
-* Centralized management of civic complaints
-
----
-
-# 12. Project Scope
-
-The scope of CivicSnap includes the complete lifecycle of civic complaint management.
-
-## Citizen Services
-
-* Citizen registration and authentication
-* Complaint registration
-* Image capture and upload
-* AI-assisted description generation
-* Description verification and editing
-* Location capture
-* Complaint status tracking
-* Complaint history
-* Mobile push notifications
 * Citizen feedback and rating
-* Resolution viewing
-
-## Complaint Processing
-
-* Complaint categorization
-* Department routing
-* Duplicate complaint detection
-* Complaint priority prediction
-* Complaint verification
-* Complaint status management
-* Complaint history tracking
-* SLA assignment and monitoring
-* Escalation management
-
-## Department Management
-
-* Department dashboard
-* Complaint verification
-* Worker assignment
-* Intelligent worker assignment recommendations
-* SLA configuration and monitoring
-* Escalation management
-* Resolution verification
 * Department performance analytics
-* Citizen feedback analysis
-* Mobile push notifications
+* Better accountability between departments and citizens
 
-## Worker Management
+The final system should allow a citizen to report an issue, follow its progress, receive important updates, and provide feedback after resolution, while enabling departments to efficiently manage complaints, workers, deadlines, and performance.
 
-* Worker authentication
-* Assigned complaint management
-* Worker availability management
-* Work status updates
-* Location-based complaint information
-* Resolution evidence submission
-* Completion notes
-* Mobile push notifications
-
-## System Administration
-
-* User management
-* Role management
-* Department management
-* Worker management
-* Complaint category management
-* SLA configuration
-* Notification configuration
-* System monitoring
-* System-wide analytics
-* Audit information
-
----
-
-# 13. Key System Capabilities
-
-The major capabilities of CivicSnap can be summarized as follows:
-
-| Capability                    | Purpose                                                        |
-| ----------------------------- | -------------------------------------------------------------- |
-| Image-based reporting         | Allows citizens to report issues using photographs             |
-| AI description generation     | Reduces the effort required to describe an issue               |
-| Location capture              | Identifies where the civic problem was reported                |
-| Department routing            | Sends complaints to the appropriate department                 |
-| Duplicate detection           | Identifies potentially repeated complaints                     |
-| Priority prediction           | Helps identify complaints requiring greater attention          |
-| Intelligent worker assignment | Helps assign suitable workers efficiently                      |
-| SLA monitoring                | Tracks complaint deadlines                                     |
-| Escalation                    | Highlights complaints that exceed expected processing time     |
-| Complaint status tracking     | Allows citizens to follow the progress of their complaints     |
-| Complaint history             | Maintains a record of important status changes and actions     |
-| Push notifications            | Keeps users informed about important system events             |
-| Resolution verification       | Provides evidence-based confirmation of completed work         |
-| Citizen feedback              | Collects citizen experience after resolution                   |
-| Performance analytics         | Measures department workload and effectiveness                 |
-| Role-based access             | Restricts system operations according to user responsibilities |
-
----
-
-# 14. Future Enhancements
-
-The current project scope focuses on the core complaint management workflow and the intelligent features defined above.
-
-Additional capabilities that may be considered after the core system is completed include:
-
-* SMS and email notifications
-* Multilingual support
-* Heat maps for frequently reported civic problems
-* Integration with existing government complaint systems
-* Predictive maintenance based on historical complaint data
-* Advanced resource planning
-* Public civic issue dashboards
-* Advanced historical trend analysis
-* Integration with external mapping and navigation services
-
-These features are outside the current core implementation scope and can be considered for later versions.
-
----
-
-# 15. Conclusion
-
-CivicSnap is designed as a complete digital workflow for managing civic complaints from initial reporting to final resolution and performance analysis.
-
-The system combines image-based reporting, AI-assisted description generation, location information, department-based processing, duplicate detection, priority prediction, intelligent worker assignment, SLA monitoring, escalation, mobile push notifications, complaint status tracking, resolution verification, citizen feedback, and department analytics into a single platform.
-
-The key objective is not to replace human decision-making with AI or automation. Instead, CivicSnap uses intelligent technologies to reduce repetitive work, provide useful recommendations, improve communication, and make the complaint management process more efficient.
-
-Citizens remain responsible for verifying their complaint information, while department administrators retain control over complaint verification, priority decisions, worker assignment, and final resolution approval.
-
-Citizens can also track their complaints throughout the complete lifecycle, view important status changes and resolution information, and receive timely notifications when significant updates occur.
-
-By maintaining a structured and traceable complaint lifecycle and providing dedicated interfaces for citizens, department administrators, field workers, and system administrators, CivicSnap aims to make civic issue reporting more accessible, transparent, accountable, and efficient.
+CivicSnap ultimately aims to create a more transparent, organized, and efficient process for handling civic issues by connecting citizens, government departments, and field workers through a single digital platform.
