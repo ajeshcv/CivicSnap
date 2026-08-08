@@ -2,16 +2,29 @@
 
 ## 1. Project Information
 
-| Item                     | Details                                                                                                |
-| ------------------------ | ------------------------------------------------------------------------------------------------------ |
-| Project Name             | CivicSnap                                                                                              |
-| Project Type             | Civic Complaint Registration and Management System                                                     |
-| Application Type         | Mobile Application and Web Application                                                                 |
-| Primary Users            | Citizens, Department Administrators, Field Workers, System Administrators                              |
-| Domain                   | E-Governance / Civic Issue Management                                                                  |
-| Core Purpose             | Reporting, processing, tracking, and resolving civic complaints                                        |
-| AI Usage                 | AI-assisted complaint description and intelligent complaint processing                                 |
-| Main Platform Components | Citizen Mobile App, Worker Mobile App, Department Web Dashboard, Admin Web Dashboard, Backend Services |
+**Project Name:** CivicSnap
+
+**Project Type:** Civic Complaint Registration and Management System
+
+**Application Type:** Mobile Application and Web Application
+
+**Primary Users:** Citizens, Department Administrators, Field Workers, and System Administrators
+
+**Domain:** E-Governance / Civic Issue Management
+
+**Core Purpose:** Reporting, processing, tracking, and resolving civic complaints
+
+**AI Usage:** AI-assisted complaint description and intelligent complaint processing
+
+**Main Platform Components:**
+- Citizen Mobile Application
+- Worker Mobile Application
+- Department Web Dashboard
+- System Administration Dashboard
+- Backend Services
+- Database
+- AI Services
+- Notification Service
 
 CivicSnap is designed to provide a centralized platform for reporting and managing civic issues. The system connects citizens with the appropriate government department and supports the complete complaint lifecycle from registration to resolution.
 
