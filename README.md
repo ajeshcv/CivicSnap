@@ -29,18 +29,3 @@ The complaint is then routed to the relevant department, where it is verified, a
 * **Authentication:** JWT
 * **Maps:** Google Maps API
 
-## Project Structure
-
-```text
-CivicSnap/
-├── AI/
-├── Backend/
-├── Dashboard/
-├── Database/
-├── Documents/
-├── Mobile/
-├── README.md
-└── .gitignore
-```
-
-
