@@ -1,8 +1,8 @@
-# CivicFlow
+# CivicSnap
 
 **AI-Assisted Civic Complaint Management System**
 
-CivicFlow is a smart civic complaint management platform that enables citizens to report public infrastructure issues using a mobile application. By capturing an image through the in-app camera, the system uses AI to generate a complaint title, description, suggest the appropriate department, estimate the complaint priority, detect duplicate complaints, and provide a confidence score before submission.
+CivicSnap is a smart civic complaint management platform that enables citizens to report public infrastructure issues using a mobile application. By capturing an image through the in-app camera, the system uses AI to generate a complaint title, description, suggest the appropriate department, estimate the complaint priority, detect duplicate complaints, and provide a confidence score before submission.
 
 The complaint is then routed to the relevant department, where it is verified, assigned to an available worker, and tracked until completion. Citizens can monitor the complaint status, view completion reports, provide feedback, or reopen unresolved complaints.
 
@@ -32,7 +32,7 @@ The complaint is then routed to the relevant department, where it is verified, a
 ## Project Structure
 
 ```text
-CivicFlow/
+CivicSnap/
 ├── AI/
 ├── Backend/
 ├── Dashboard/
